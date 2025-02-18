@@ -11,7 +11,7 @@ while (true)
             
                 userInterface.ConversionValueInput();
                 userInput = Console.ReadLine();
-                converter.ConvertInput(userInput);
+                converter.Convert(userInput);
         }
         else userInterface.InvalidType("input");
 }

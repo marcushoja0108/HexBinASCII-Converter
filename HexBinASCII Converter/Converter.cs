@@ -21,7 +21,7 @@ public class Converter
         return result;
     }
 
-    public void ConvertInput(string userInput)
+    public void Convert(string userInput)
     {
         HexOutPut = "";
         ASCIIOutPut = "";
@@ -42,7 +42,7 @@ public class Converter
         ShowOutput();
     }
 
-    public void ShowOutput()
+    private void ShowOutput()
     {
         Console.WriteLine();
         Console.WriteLine($"Hexadecimal: {HexOutPut}");
@@ -147,7 +147,7 @@ public class Converter
         for (int i = 0; i < HexString.Length; i += 2)
         {
             string characters = HexOutPut.Substring(i, 2);
-            int asciiValue = Convert.ToInt32(characters, 16);
+            int asciiValue = System.Convert.ToInt32(characters, 16);
             ascii.Append((char)asciiValue);
         }
         ASCIIOutPut = ascii.ToString();
